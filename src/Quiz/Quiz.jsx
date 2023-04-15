@@ -19,9 +19,11 @@ const config = {
 }
 
 // Props which can be configured on Quiz component:
-// quiz  | JSON Object for quiz data
-// config | JSON Object for config (color, theme darkmode/lightmode)
-// allowBackJump | Boolean which allows Backjumping to previous Questions or not
+// ----------------------------------------------------------------------------
+// quiz             | JSON Object for quiz data
+// config           | JSON Object for config (color, theme darkmode/lightmode)
+// allowBackJump    | Boolean which allows Backjumping to previous Questions or not
+// showProgressBar  | Boolean which can be enabled to show a quiz progress bar
 
 export const Quiz = (props) => {
 
@@ -30,7 +32,9 @@ export const Quiz = (props) => {
       <QuizProvider>
         <QuizContainer
           quiz={props.quiz !== undefined ? props.quiz : quiz}
-          allowBackJump={props.allowBackJump !== undefined ? true : false} />
+          allowBackJump={props.allowBackJump !== undefined ? true : false}
+          showProgressBar={props.showProgressBar !== undefined ? true : false}
+        />
       </QuizProvider>
     </HopeProvider>
   )

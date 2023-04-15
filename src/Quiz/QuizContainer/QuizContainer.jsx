@@ -6,10 +6,13 @@ import QuizContent from "./QuizContent/QuizContent";
 import QuizResults from "./QuizResults/QuizResults";
 
 const QuizContainer = (props) => {
-    const { currentPage, questionsSum, setInitialQuizInfo } = useQuizData();
+    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar } = useQuizData();
 
 
+    // Setting props for component
     setInitialQuizInfo(props.quiz);
+    setAllowBackjumping(props.allowBackJump);
+    setShowProgressBar(props.showProgressBar);
 
     return (
         <Switch>
@@ -28,7 +31,7 @@ const QuizContainer = (props) => {
             <Match when={questionsSum() + 1 === currentPage()}>
                 <QuizResults />
             </Match>
-            
+
             <Match when={currentPage() > -1}>
                 <QuizContent />
             </Match>

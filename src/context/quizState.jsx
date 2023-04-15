@@ -9,6 +9,7 @@ export function QuizProvider(props) {
     const [currentPage, setCurrentPage] = createSignal(0);    // sum of all questions from the quiz  //0 is for showng start page, 0 is the first Question 1, the seconde usw.
     const [currentQuestion, setCurrentQuestion] = createSignal({});    // sum of all questions from the quiz  //-1 is for showng start page, 0 is the first Question 1, the seconde usw.
     const [allowBackjumping, setAllowBackjumping] = createSignal(true);    // set if it is allowed to jump back, true means it is allowed
+    const [showProgressBar, setShowProgressBar] = createSignal(false);    // if it is true show progressbar is visible, else progressbar is hidden
     // const [quizStyle, setQuizStyle] = createSignal("true");    // set quizstyle at the moment there are two styles: ("scroll" | "default") 
     const [allUserAnswers, setAllUserAnswers] = createSignal([]);
 
@@ -28,7 +29,7 @@ export function QuizProvider(props) {
         setCurrentQuestion(quiz().questions[pIndex - 1]);
     }
 
-    return <QuizContext.Provider value={{ progress, setProgress, questionsSum, setQuestionsSum, allowBackjumping, setAllowBackjumping, currentPage, setCurrentPage, setInitialQuizInfo, setCurrentQuestion, currentQuestion, navigateToQuizPage, quiz, setQuiz, setAllUserAnswers, allUserAnswers }}>
+    return <QuizContext.Provider value={{ progress, setProgress, questionsSum, setQuestionsSum, allowBackjumping, setAllowBackjumping, currentPage, setCurrentPage, setInitialQuizInfo, setCurrentQuestion, currentQuestion, navigateToQuizPage, quiz, setQuiz, setAllUserAnswers, allUserAnswers, showProgressBar, setShowProgressBar }}>
         {props.children}
     </QuizContext.Provider >
 }
