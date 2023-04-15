@@ -1,0 +1,64 @@
+{
+  "quizTitle": "SolidJS Quiz",
+  "allowBackjumping": true,
+  "questions": [
+    {
+      "question": "Who invented solidjs?",
+      "questionType": "singlechoice",
+      "answers": [
+        "Ryan Carniato",
+        "Linus Torvalds"
+      ],
+      "correctAnswer": "0",
+      "point": "10"
+    },
+    {
+      "question": "Arrange the different frontend frameworks in descending order of their Github Stars.",
+      "questionType": "correctorder",
+      "answers": [
+        "Solid",
+        "Angular",
+        "Vue",
+        "React",
+        "Svelte"
+      ],
+      "correctAnswer": [
+        "React",
+        "Vue",
+        "Angular",
+        "Svelte",
+        "Solid"
+      ],
+      "point": "10"
+    },
+    {
+      "question": "What are new JSX components that solidjs has out of the box compared to React?",
+      "questionType": "multiplechoice",
+      "answers": [
+        "For",
+        "Index",
+        "All",
+        "Switch",
+        "Match"
+      ],
+      "correctAnswer": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "point": "10"
+    },
+    {
+      "question": "When was the first commit in the Solidjs repostory?",
+      "questionType": "singlechoice",
+      "answers": [
+        "2020",
+        "2016"
+      ],
+      "correctAnswer": "1",
+      "point": "10"
+    }
+  ]
+}

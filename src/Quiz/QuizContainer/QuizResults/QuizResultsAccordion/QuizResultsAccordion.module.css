@@ -1,0 +1,6 @@
+.correctAnswer {
+    color: var(--hope-colors-success9) !important;
+}
+.wrongAnswer {
+    color: var(--hope-colors-danger9) !important;
+}

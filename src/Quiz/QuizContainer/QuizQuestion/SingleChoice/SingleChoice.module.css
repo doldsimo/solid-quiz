@@ -1,0 +1,15 @@
+.answerBox{
+    cursor: pointer;
+    margin-top: 0.7em;
+    background-color: var(--hope-colors-primary3);
+    transition: background-color 200ms linear;
+}
+
+.answerBoxActive{
+    background-color: var(--hope-colors-success7);
+    transition: background-color 200ms linear;
+}
+
+.radioButton{
+    margin: .2em;
+}

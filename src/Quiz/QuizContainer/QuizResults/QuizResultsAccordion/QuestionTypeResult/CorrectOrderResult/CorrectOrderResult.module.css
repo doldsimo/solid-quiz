@@ -1,0 +1,24 @@
+.correctAnswer {
+    display: flex;
+    cursor: not-allowed;
+    background-color: var(--hope-colors-success5);
+    border-radius: var(--hope-radii-md);
+    width: 100%;
+    padding-left: .5em;
+    margin-left: .3em;
+}
+
+.wrongAnswer {
+    display: flex;
+    cursor: not-allowed;
+    border-radius: var(--hope-radii-md);
+    background-color: var(--hope-colors-danger5);
+    width: 100%;
+    padding-left: .5em;
+    margin-left: .3em;
+}
+
+.answerContainer {
+    display: flex;
+    margin-top: .7em;
+}

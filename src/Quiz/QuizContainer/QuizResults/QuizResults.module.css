@@ -1,0 +1,14 @@
+.resultContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.achivedPoints {
+    color: var(--hope-colors-success9);
+    font-size: larger
+}
+
+.allPoints {
+    color: var(--hope-colors-success9);
+    font-size: larger
+}

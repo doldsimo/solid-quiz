@@ -1,0 +1,15 @@
+.correctAnswer{
+    cursor: not-allowed;
+    margin-top: 0.7em;
+    background-color: var(--hope-colors-success5);
+}
+
+.wrongAnswer {
+    cursor: not-allowed;
+    margin-top: 0.7em;
+    background-color: var(--hope-colors-danger5);
+}
+
+.radioButton{
+    margin: .2em;
+}
