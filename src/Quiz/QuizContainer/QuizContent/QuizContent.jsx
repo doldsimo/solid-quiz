@@ -9,7 +9,6 @@ import { useQuizData } from "../../../context/quizState"
 
 const QuizContent = () => {
     const { showProgressBar } = useQuizData();
-    console.log("showProgressBar: ", showProgressBar());
     return (
         <>
             {showProgressBar() && <ProgressBar />}

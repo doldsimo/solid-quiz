@@ -4,10 +4,10 @@ import { useQuizData } from "../../context/quizState";
 import QuizStartScreen from "./QuizStartScreen/QuizStartScreen";
 import QuizContent from "./QuizContent/QuizContent";
 import QuizResults from "./QuizResults/QuizResults";
+import { useColorMode } from "@hope-ui/solid";
 
 const QuizContainer = (props) => {
     const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar } = useQuizData();
-
 
     // Setting props for component
     setInitialQuizInfo(props.quiz);

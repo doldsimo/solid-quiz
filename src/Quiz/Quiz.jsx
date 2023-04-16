@@ -4,8 +4,8 @@ import quiz from "../examplequiz/quiz.json";
 
 import lightColors from '../theme/lightColors';
 import darkColors from '../theme/darkColors';
-import { HopeProvider } from "@hope-ui/solid";
-
+import { HopeProvider, useColorMode } from "@hope-ui/solid";
+import { createEffect, createMemo, createSignal } from "solid-js";
 
 // Config for HopeUi
 const config = {
@@ -34,6 +34,7 @@ export const Quiz = (props) => {
           quiz={props.quiz !== undefined ? props.quiz : quiz}
           allowBackJump={props.allowBackJump !== undefined ? true : false}
           showProgressBar={props.showProgressBar !== undefined ? true : false}
+
         />
       </QuizProvider>
     </HopeProvider>
