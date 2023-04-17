@@ -26,6 +26,7 @@ const config = {
 // showProgressBar  | Boolean which can be enabled to show a quiz progress bar
 
 export const Quiz = (props) => {
+  console.log(props.config);
 
   return (
     <HopeProvider config={props.config !== undefined ? props.config : config}>

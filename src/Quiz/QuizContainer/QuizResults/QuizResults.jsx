@@ -52,7 +52,7 @@ const QuizResults = () => {
             <br />
             {showResultInfo() && <QuizResultsAccordion />}
             <Center>
-                <Button onClick={() => cleanQuiz()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
+                <Button class={styles.backButton} onClick={() => cleanQuiz()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
                 {/* <Button style={{ "margin": "auto" }} ></Button> */}
             </Center>
 

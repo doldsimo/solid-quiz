@@ -1,4 +1,4 @@
-.resultContainer{
+.resultContainer {
     display: flex;
     justify-content: space-around;
 }
@@ -11,4 +11,8 @@
 .allPoints {
     color: var(--hope-colors-success9);
     font-size: larger
+}
+
+.backButton {
+    border-color: var(--hope-colors-primary11);
 }
