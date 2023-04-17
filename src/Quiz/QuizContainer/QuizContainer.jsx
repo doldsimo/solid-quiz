@@ -4,15 +4,15 @@ import { useQuizData } from "../../context/quizState";
 import QuizStartScreen from "./QuizStartScreen/QuizStartScreen";
 import QuizContent from "./QuizContent/QuizContent";
 import QuizResults from "./QuizResults/QuizResults";
-import { useColorMode } from "@hope-ui/solid";
 
 const QuizContainer = (props) => {
-    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar } = useQuizData();
+    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar, setShowQuizPoints } = useQuizData();
 
-    // Setting props for component
+    // Setting props for component which are passed from library user
     setInitialQuizInfo(props.quiz);
     setAllowBackjumping(props.allowBackJump);
     setShowProgressBar(props.showProgressBar);
+    setShowQuizPoints(props.showQuizPoints);
 
     return (
         <Switch>

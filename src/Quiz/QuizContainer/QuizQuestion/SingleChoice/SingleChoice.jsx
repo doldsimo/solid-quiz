@@ -1,11 +1,11 @@
-import { Box, Heading, Radio, Text } from "@hope-ui/solid"
+import { Badge, Box, Heading, Radio, Tag, Text } from "@hope-ui/solid"
 import { useQuizData } from "../../../../context/quizState";
 import { createSignal, onCleanup, onMount } from "solid-js";
 
 import styles from './SingleChoice.module.css';
 
 const SingleChoice = () => {
-    const { currentQuestion, allUserAnswers, currentPage } = useQuizData();
+    const { currentQuestion, allUserAnswers, currentPage, showQuizPoints } = useQuizData();
     const realPage = currentPage(); // helping variable for using onMount and onCleanup mehtod with correct page
 
     const [checkedAnswer, setCheckedAnswer] = createSignal(null);
@@ -26,9 +26,12 @@ const SingleChoice = () => {
         allUserAnswers()[realPage - 1] = checkedAnswer();
     });
 
+    console.log(currentQuestion());
+
     return (
         <div>
             <Heading level="2" size="xl" my="$3">{currentQuestion().question}</Heading>
+            {showQuizPoints() && <Tag colorScheme="warning">Max points: {currentQuestion().point}</Tag>}
             <div>
                 <Index each={currentQuestion().answers}>
                     {(answer, i) => (

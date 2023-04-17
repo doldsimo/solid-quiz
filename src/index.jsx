@@ -5,7 +5,7 @@ import { Quiz } from "./Quiz/Quiz";
 
 const App = () => {
   const config = {
-    initialColorMode: "light", // dark/light
+    initialColorMode: "light", // dark/light/system
     lightTheme: {
       colors: {
         // primary3: "#d7373c", // color for default answer boxes
