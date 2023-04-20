@@ -34,6 +34,7 @@ const App = () => {
       allowBackJump={true}
       showProgressBar={true}
       showQuizPoints={true}
+      resultType="feedback"
     />
   );
 };

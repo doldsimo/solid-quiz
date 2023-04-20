@@ -6,13 +6,14 @@ import QuizContent from "./QuizContent/QuizContent";
 import QuizResults from "./QuizResults/QuizResults";
 
 const QuizContainer = (props) => {
-    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar, setShowQuizPoints } = useQuizData();
+    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar, setShowQuizPoints, setResultType } = useQuizData();
 
     // Setting props for component which are passed from library user
     setInitialQuizInfo(props.quiz);
     setAllowBackjumping(props.allowBackJump);
     setShowProgressBar(props.showProgressBar);
     setShowQuizPoints(props.showQuizPoints);
+    setResultType(props.resultType);
 
     return (
         <Switch>

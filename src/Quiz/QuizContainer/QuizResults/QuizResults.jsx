@@ -1,6 +1,6 @@
 import { Button, Center, Container, Heading, Progress, ProgressIndicator } from "@hope-ui/solid"
 import { useQuizData } from "../../../context/quizState";
-import { createSignal, onMount } from "solid-js";
+import { Match, Switch, createSignal, onMount } from "solid-js";
 import getUserResultPoints from "../../../helper/result";
 import styles from './QuizResults.module.css';
 import { IoArrowBackCircleSharp } from 'solid-icons/io';
@@ -8,7 +8,7 @@ import QuizResultsAccordion from "./QuizResultsAccordion/QuizResultsAccordion";
 
 
 const QuizResults = () => {
-    const { setCurrentPage, quiz, allUserAnswers, setInitialQuizInfo } = useQuizData();
+    const { setCurrentPage, quiz, allUserAnswers, setInitialQuizInfo, resultType } = useQuizData();
     const [points, setPoints] = createSignal(0);
     const [showResultInfo, setShowResultInfo] = createSignal(false);
 
@@ -31,30 +31,59 @@ const QuizResults = () => {
 
     return (
         <Container maxW="$xl">
-            <Center>
-                <Heading level={1} size="xl">
-                    Results
-                </Heading>
-            </Center>
-            <br />
-            <Progress size="lg" value={points().resultSum} max={points().maxSum} rounded={true}>
-                <ProgressIndicator color="$success9" />
-            </Progress>
-            <Center>
-                <p>
-                    You have achieved <b class={styles.achivedPoints}>{points().resultSum}</b> out of <b class={styles.allPoints}>{points().maxSum}</b> points.
-                </p>
-            </Center>
-            <br />
-            <Center>
-                <Button onClick={() => toggleResults()} style={{ "margin": "auto", "background-color": "var(--hope-colors-success9)" }}>{showResultInfo() ? "Less result informations" : "More result informations"}</Button>
-            </Center>
-            <br />
-            {showResultInfo() && <QuizResultsAccordion />}
-            <Center>
-                <Button class={styles.backButton} onClick={() => cleanQuiz()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
-                {/* <Button style={{ "margin": "auto" }} ></Button> */}
-            </Center>
+            <Switch fallback={<p>{x()} is between 5 and 10</p>}>
+                <Match when={resultType() === "none"}>
+                    <Center>
+                        <Button class={styles.backButton} onClick={() => cleanQuiz()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
+                    </Center>
+                </Match>
+                <Match when={resultType() === "points"}>
+                    <Center>
+                        <Heading level={1} size="xl">
+                            Results
+                        </Heading>
+                    </Center>
+                    <br />
+                    <Progress size="lg" value={points().resultSum} max={points().maxSum} rounded={true}>
+                        <ProgressIndicator color="$success9" />
+                    </Progress>
+                    <Center>
+                        <p>
+                            You have achieved <b class={styles.achivedPoints}>{points().resultSum}</b> out of <b class={styles.allPoints}>{points().maxSum}</b> points.
+                        </p>
+                    </Center>
+                    <br />
+                    <Center>
+                        <Button class={styles.backButton} onClick={() => cleanQuiz()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
+                    </Center>
+                </Match>
+                <Match when={resultType() === "feedback"}>
+                    <Center>
+                        <Heading level={1} size="xl">
+                            Results
+                        </Heading>
+                    </Center>
+                    <br />
+                    <Progress size="lg" value={points().resultSum} max={points().maxSum} rounded={true}>
+                        <ProgressIndicator color="$success9" />
+                    </Progress>
+                    <Center>
+                        <p>
+                            You have achieved <b class={styles.achivedPoints}>{points().resultSum}</b> out of <b class={styles.allPoints}>{points().maxSum}</b> points.
+                        </p>
+                    </Center>
+                    <br />
+                    <Center>
+                        <Button onClick={() => toggleResults()} style={{ "margin": "auto", "background-color": "var(--hope-colors-success9)" }}>{showResultInfo() ? "Less result informations" : "More result informations"}</Button>
+                    </Center>
+                    <br />
+                    {showResultInfo() && <QuizResultsAccordion />}
+                    <Center>
+                        <Button class={styles.backButton} onClick={() => cleanQuiz()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
+                    </Center>
+
+                </Match>
+            </Switch>
 
         </Container>
     )
