@@ -11,6 +11,7 @@ export function QuizProvider(props) {
     const [allowBackjumping, setAllowBackjumping] = createSignal(true);    // set if it is allowed to jump back, true means it is allowed
     const [showProgressBar, setShowProgressBar] = createSignal(false);    // if it is true show progressbar is visible, else progressbar is hidden
     const [showQuizPoints, setShowQuizPoints] = createSignal(false);    // if it is true show max points in every Quiz question
+    // const [showResult, setShowResult] = createSignal(false);    // variable which decide how the result is displayed there are these options: ("none" | "points" | "feedback")
     // const [quizStyle, setQuizStyle] = createSignal("true");    // set quizstyle at the moment there are two styles: ("scroll" | "default") 
     const [allUserAnswers, setAllUserAnswers] = createSignal([]);
 

@@ -29,7 +29,12 @@ const App = () => {
   }
 
   return (
-    <Quiz config={config} allowBackJump={true} showProgressBar={true} />
+    <Quiz
+      config={config}
+      allowBackJump={true}
+      showProgressBar={true}
+      showQuizPoints={true}
+    />
   );
 };
 

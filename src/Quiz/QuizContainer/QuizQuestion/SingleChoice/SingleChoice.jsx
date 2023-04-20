@@ -26,8 +26,6 @@ const SingleChoice = () => {
         allUserAnswers()[realPage - 1] = checkedAnswer();
     });
 
-    console.log(currentQuestion());
-
     return (
         <div>
             <Heading level="2" size="xl" my="$3">{currentQuestion().question}</Heading>

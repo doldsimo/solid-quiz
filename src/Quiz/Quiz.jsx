@@ -27,16 +27,16 @@ const config = {
 // showQuizPoints   | Boolean which can be enabled to show inside the quiz the max. Points for every question
 
 export const Quiz = (props) => {
-  console.log(props.config);
+  console.log(props);
 
   return (
     <HopeProvider config={props.config !== undefined ? props.config : config}>
       <QuizProvider>
         <QuizContainer
           quiz={props.quiz !== undefined ? props.quiz : quiz}
-          allowBackJump={props.allowBackJump !== undefined ? true : false}
-          showProgressBar={props.showProgressBar !== undefined ? true : false}
-          showQuizPoints={true}
+          allowBackJump={props.allowBackJump === undefined ? false : props.allowBackJump }
+          showProgressBar={props.showProgressBar === undefined ? true : props.showProgressBar}
+          showQuizPoints={props.showQuizPoints === undefined ? false : props.showQuizPoints}
 
         />
       </QuizProvider>

@@ -1,11 +1,11 @@
-import { Heading } from "@hope-ui/solid";
+import { Heading, Tag } from "@hope-ui/solid";
 import { useQuizData } from "../../../../context/quizState";
 import { createSignal, onCleanup, onMount } from "solid-js";
 
 import SortableVerticalList from './SortableVerticalList';
 
 const CorrectOrder = () => {
-    const { currentQuestion, allUserAnswers, currentPage } = useQuizData();
+    const { currentQuestion, allUserAnswers, currentPage, showQuizPoints } = useQuizData();
     const realPage = currentPage(); // herlping variable for using onMount and onCleanup mehtod with correct page
     const [items, setItems] = createSignal(currentQuestion().answers);
 
@@ -24,6 +24,7 @@ const CorrectOrder = () => {
     return (
         <div>
             <Heading level="2" size="xl" my="$3">{currentQuestion().question}</Heading>
+            {showQuizPoints() && <Tag colorScheme="warning">Max points: {currentQuestion().point * currentQuestion().answers.length}</Tag>}
             <div>
                 <SortableVerticalList items={items()} setItems={setItems} />
             </div>

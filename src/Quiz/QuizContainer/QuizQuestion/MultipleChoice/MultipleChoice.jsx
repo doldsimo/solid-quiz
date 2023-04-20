@@ -1,10 +1,10 @@
-import { Box, Checkbox, Heading, Text } from "@hope-ui/solid"
+import { Box, Checkbox, Heading, Tag, Text } from "@hope-ui/solid"
 import { useQuizData } from "../../../../context/quizState";
 import { createSignal, onCleanup, onMount } from "solid-js";
 import styles from "./MultipleChoice.module.css";
 
 const MultipleChoice = () => {
-    const { currentQuestion, allUserAnswers, currentPage } = useQuizData();
+    const { currentQuestion, allUserAnswers, currentPage, showQuizPoints } = useQuizData();
     const realPage = currentPage(); // herlping variable for using onMount and onCleanup mehtod with correct page
 
     const [checkedAnswers, setCheckedAnswers] = createSignal(Array.from({ length: currentQuestion().answers.length }, i => i = false));
@@ -31,6 +31,7 @@ const MultipleChoice = () => {
     return (
         <div>
             <Heading level="2" size="xl" my="$3">{currentQuestion().question}</Heading>
+            {showQuizPoints() && <Tag colorScheme="warning">Max points: {currentQuestion().point * currentQuestion().answers.length}</Tag>}
             <div>
                 <Index each={currentQuestion().answers}>
                     {(answer, i) => (
