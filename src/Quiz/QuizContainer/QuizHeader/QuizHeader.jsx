@@ -8,6 +8,7 @@ import CorrectOrderTag from "./QuestionTypeTag/CorrectOrderTag/CorrectOrderTag";
 import DragAndDropTag from "./QuestionTypeTag/DragAndDropTag/DragAndDropTag";
 import RelationTag from "./QuestionTypeTag/RelationTag/RelationTag";
 import SingleChoiceTag from "./QuestionTypeTag/SingleChoiceTag/SingleChoiceTag";
+import NumberInputTag from "./QuestionTypeTag/NumberInputTag/NumberInputTag";
 
 
 const QuizHeader = () => {
@@ -33,9 +34,13 @@ const QuizHeader = () => {
                 <Match when={currentQuestion().questionType === "draganddrop"}>
                     <DragAndDropTag />
                 </Match>
+                <Match when={currentQuestion().questionType === "numberinput"}>
+                    <NumberInputTag />
+                </Match>
                 <Match when={currentQuestion().questionType === "relatonquestion"}>
                     <RelationTag />
                 </Match>
+
             </Switch>
         </div>
     )

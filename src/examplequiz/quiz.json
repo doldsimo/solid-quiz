@@ -3,6 +3,12 @@
   "allowBackjumping": true,
   "questions": [
     {
+      "question": "How many GitHub stars does the Solidjs repository have? (04/25/2023)",
+      "questionType": "numberinput",
+      "correctAnswer": "27000",
+      "point": "10"
+    },
+    {
       "question": "Who invented solidjs?",
       "questionType": "singlechoice",
       "answers": [

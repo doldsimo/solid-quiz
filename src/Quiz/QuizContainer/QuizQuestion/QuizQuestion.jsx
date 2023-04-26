@@ -1,8 +1,10 @@
 import { Switch, createMemo, createSignal } from "solid-js";
-import SingleChoice from "./SingleChoice/SingleChoice";
 import { useQuizData } from "../../../context/quizState";
+
+import SingleChoice from "./SingleChoice/SingleChoice";
 import MultipleChoice from "./MultipleChoice/MultipleChoice";
 import CorrectOrder from "./CorrectOrder/CorrectOrder";
+import NumberInput from "./NumberInput/NumberInput";
 
 let counter = 0;
 let oldQuestionType = "";
@@ -43,7 +45,10 @@ const QuizQuestion = () => {
           {helper() && <MultipleChoice />}
         </Match>
         <Match when={currentQuestion().questionType === "correctorder"}>
-          {helper() && <CorrectOrder/>}
+          {helper() && <CorrectOrder />}
+        </Match>
+        <Match when={currentQuestion().questionType === "numberinput"}>
+          {helper() && <NumberInput />}
         </Match>
       </Switch>
     </div>

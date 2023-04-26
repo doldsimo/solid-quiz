@@ -30,6 +30,7 @@ const App = () => {
 
   return (
     <Quiz
+      quiz={undefined}
       config={config}
       allowBackJump={true}
       showProgressBar={true}

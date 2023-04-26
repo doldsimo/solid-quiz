@@ -1,0 +1,7 @@
+.answerInputBox{
+    /* cursor: pointer; */
+    margin-top: 0.7em;
+    padding: 0.7em;
+    background-color: var(--hope-colors-primary3);
+    transition: background-color 200ms linear;
+}
