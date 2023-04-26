@@ -4,7 +4,7 @@ import { useQuizData } from "../../../../../../context/quizState";
 import styles from "./CorrectOrderResult.module.css";
 import { Index } from "solid-js";
 
-const CorrectOrder = (props) => {
+const CorrectOrderResult = (props) => {
     const { allUserAnswers } = useQuizData();
 
     return (
@@ -26,4 +26,4 @@ const CorrectOrder = (props) => {
     )
 }
 
-export default CorrectOrder
+export default CorrectOrderResult

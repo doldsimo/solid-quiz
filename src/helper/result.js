@@ -14,6 +14,9 @@ export default function getUserResultPoints(userAnswers, quiz) {
             case "correctorder":
                 tep_result = checkCorrectOrderQestion(userAnswers[i], quiz.questions[i].correctAnswer, quiz.questions[i].point);
                 break;
+            case "numberinput":
+                tep_result = checkNumberInputQestion(userAnswers[i], quiz.questions[i].correctAnswer, quiz.questions[i].point);
+                break;
             default:
                 break;
         }
@@ -54,7 +57,7 @@ const checkMultipleChoiceQuestion = (userAnswer, quizAnswer, pointsForQuestion) 
     return result;
 }
 
-// calculate CorrectOrderQestion points
+// calculate CorrectOrderQuestion points
 const checkCorrectOrderQestion = (userAnswer, quizAnswer, pointsForQuestion) => {
     let result = { temp_resultSum: 0, temp_maxSum: 0 };
     let numberPointsForQuestion = Number(pointsForQuestion);
@@ -64,6 +67,18 @@ const checkCorrectOrderQestion = (userAnswer, quizAnswer, pointsForQuestion) => 
             result.temp_resultSum = result.temp_resultSum + numberPointsForQuestion;
         }
         result.temp_maxSum = result.temp_maxSum + numberPointsForQuestion;
+    }
+    return result;
+}
+
+// calculate NumberInputQuestion points
+const checkNumberInputQestion = (userAnswer, quizAnswer, pointsForQuestion) => {
+    let result = { temp_resultSum: 0, temp_maxSum: 0 };
+    let numberPointsForQuestion = Number(pointsForQuestion);
+
+    result.temp_maxSum = numberPointsForQuestion;
+    if (userAnswer === quizAnswer) {
+        result.temp_resultSum = numberPointsForQuestion;
     }
     return result;
 }

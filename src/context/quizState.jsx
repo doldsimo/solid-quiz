@@ -1,4 +1,4 @@
-import { createContext, createSignal, useContext, createEffect } from "solid-js";
+import { createContext, createSignal, useContext } from "solid-js";
 
 export const QuizContext = createContext();
 

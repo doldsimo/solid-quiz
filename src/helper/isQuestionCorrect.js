@@ -30,3 +30,11 @@ export function isCorrectOrderCorrect(userAnswer, correctAnswer) {
     return isCorrect;
 }
 
+export function isNumberInputCorrect(userAnswer, correctAnswer) {
+    let isCorrect = true;
+    if (correctAnswer !== userAnswer) {
+        return false;
+    }
+    return isCorrect;
+}
+
