@@ -36,7 +36,7 @@ const NumberInput = () => {
                     <InputLeftElement pointerEvents="none">
                         <OcNumber2 color="$neutral8" />
                     </InputLeftElement>
-                    <Input type="number" value={answerNumber()} placeholder="Your answer (Number)" onChange={(e) => setAnswer(e)} />
+                    <Input class={styles.inputFied} type="number" value={answerNumber()} placeholder="Your answer (Number)" onChange={(e) => setAnswer(e)} />
                 </InputGroup>
 
             </Box>

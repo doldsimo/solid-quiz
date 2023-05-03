@@ -5,3 +5,7 @@
     background-color: var(--hope-colors-primary3);
     transition: background-color 200ms linear;
 }
+
+.inputFied{
+    background-color: var(--hope-colors-neutral1)
+}
