@@ -17,6 +17,9 @@ export default function getUserResultPoints(userAnswers, quiz) {
             case "numberinput":
                 tep_result = checkNumberInputQestion(userAnswers[i], quiz.questions[i].correctAnswer, quiz.questions[i].point);
                 break;
+            case "gaptext":
+                tep_result = checkGapTextQestion(userAnswers[i], quiz.questions[i].correctAnswer, quiz.questions[i].point);
+                break;
             default:
                 break;
         }
@@ -79,6 +82,20 @@ const checkNumberInputQestion = (userAnswer, quizAnswer, pointsForQuestion) => {
     result.temp_maxSum = numberPointsForQuestion;
     if (userAnswer === quizAnswer) {
         result.temp_resultSum = numberPointsForQuestion;
+    }
+    return result;
+}
+
+// calculate checkMultipleChoiceQuestion points
+const checkGapTextQestion = (userAnswer, quizAnswer, pointsForQuestion) => {
+    let result = { temp_resultSum: 0, temp_maxSum: 0 };
+    let numberPointsForQuestion = Number(pointsForQuestion);
+
+    for (let i = 0; i < userAnswer.length; i++) {
+        if (userAnswer[i] === quizAnswer[i]) {
+            result.temp_resultSum = result.temp_resultSum + numberPointsForQuestion;
+        }
+        result.temp_maxSum = result.temp_maxSum + numberPointsForQuestion;
     }
     return result;
 }

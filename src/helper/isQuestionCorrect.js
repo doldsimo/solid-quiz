@@ -10,7 +10,6 @@ export function isSingleChoiceCorrect(userAnswer, correctAnswer) {
     }
     return isCorrect;
 }
-
 export function isMultipleChoiceCorrect(userAnswer, correctAnswer) {
     let isCorrect = true;
     for (let i = 0; i < correctAnswer.length; i++) {
@@ -29,7 +28,6 @@ export function isCorrectOrderCorrect(userAnswer, correctAnswer) {
     }
     return isCorrect;
 }
-
 export function isNumberInputCorrect(userAnswer, correctAnswer) {
     let isCorrect = true;
     if (correctAnswer !== userAnswer) {
@@ -37,4 +35,12 @@ export function isNumberInputCorrect(userAnswer, correctAnswer) {
     }
     return isCorrect;
 }
-
+export function isCorrectGapText(userAnswer, correctAnswer) {
+    let isCorrect = true;
+    for (let i = 0; i < correctAnswer.length; i++) {
+        if (correctAnswer[i] !== userAnswer[i]) {
+            return false;
+        }
+    }
+    return isCorrect;
+}

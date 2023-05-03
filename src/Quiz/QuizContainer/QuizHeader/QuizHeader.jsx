@@ -9,6 +9,7 @@ import DragAndDropTag from "./QuestionTypeTag/DragAndDropTag/DragAndDropTag";
 import RelationTag from "./QuestionTypeTag/RelationTag/RelationTag";
 import SingleChoiceTag from "./QuestionTypeTag/SingleChoiceTag/SingleChoiceTag";
 import NumberInputTag from "./QuestionTypeTag/NumberInputTag/NumberInputTag";
+import GapTextTag from "./QuestionTypeTag/GapTextTag/GapTextTag";
 
 
 const QuizHeader = () => {
@@ -39,6 +40,9 @@ const QuizHeader = () => {
                 </Match>
                 <Match when={currentQuestion().questionType === "relatonquestion"}>
                     <RelationTag />
+                </Match>
+                <Match when={currentQuestion().questionType === "gaptext"}>
+                    <GapTextTag />
                 </Match>
 
             </Switch>

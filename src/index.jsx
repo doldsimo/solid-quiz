@@ -3,6 +3,8 @@ import { render } from 'solid-js/web';
 
 import { Quiz } from "./Quiz/Quiz";
 
+import quiz_gap from "./examplequiz/quiz_gap.json";
+
 const App = () => {
   const config = {
     initialColorMode: "light", // dark/light/system
@@ -30,7 +32,7 @@ const App = () => {
 
   return (
     <Quiz
-      quiz={undefined}
+      quiz={quiz_gap}
       config={config}
       allowBackJump={true}
       showProgressBar={true}

@@ -3,12 +3,13 @@ import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPane
 import { useQuizData } from "../../../../context/quizState";
 import styles from "./QuizResultsAccordion.module.css";
 import { AiFillCheckCircle, AiFillCloseCircle } from 'solid-icons/ai'
-import { isMultipleChoiceCorrect, isSingleChoiceCorrect, isCorrectOrderCorrect, isNumberInputCorrect } from "../../../../helper/isQuestionCorrect";
+import { isMultipleChoiceCorrect, isSingleChoiceCorrect, isCorrectOrderCorrect, isNumberInputCorrect, isCorrectGapText } from "../../../../helper/isQuestionCorrect";
 
 import CorrectOrderResult from "./QuestionTypeResult/CorrectOrderResult/CorrectOrderResult";
 import MultipleChoiceResult from "./QuestionTypeResult/MultipleChoiceResult/MultipleChoiceResult";
 import SingleChoiceResult from "./QuestionTypeResult/SingleChoiceResult/SingleChoiceResult";
 import NumberInputResult from "./QuestionTypeResult/NumberInputResult/NumberInputResult";
+import GapTextResult from "./QuestionTypeResult/GapTextResult/GapTextResult";
 
 const QuizResultsAccordion = () => {
     const { quiz, allUserAnswers } = useQuizData();
@@ -59,6 +60,15 @@ const QuizResultsAccordion = () => {
                                             </Text>
                                             <AccordionIcon />
                                         </Match>
+                                        <Match when={question.questionType === "gaptext"}>
+                                            <Center style={{ "margin-right": "0.5em" }}>
+                                                {isCorrectGapText(allUserAnswers()[i()], question.correctAnswer) ? <AiFillCheckCircle class={styles.correctAnswer} /> : <AiFillCloseCircle class={styles.wrongAnswer} />}
+                                            </Center>
+                                            <Text class={isCorrectGapText(allUserAnswers()[i()], question.correctAnswer) ? styles.correctAnswer : styles.wrongAnswer} flex={1} fontWeight="$medium" textAlign="start">
+                                                #{i() + 1}: Gap text: {question.question.substring(0,50)}...
+                                            </Text>
+                                            <AccordionIcon />
+                                        </Match>
                                     </Switch>
                                 </AccordionButton>
                             </h2>
@@ -76,6 +86,9 @@ const QuizResultsAccordion = () => {
                                     </Match>
                                     <Match when={question.questionType === "numberinput"}>
                                         <NumberInputResult question={question} qIndex={i()} />
+                                    </Match>
+                                    <Match when={question.questionType === "gaptext"}>
+                                        <GapTextResult question={question} qIndex={i()} />
                                     </Match>
                                 </Switch>
                             </AccordionPanel>

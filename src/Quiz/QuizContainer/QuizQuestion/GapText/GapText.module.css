@@ -1,0 +1,5 @@
+.select {
+    background-color: var(--hope-colors-primary3);
+    width: auto;
+    min-width: 10em;
+}

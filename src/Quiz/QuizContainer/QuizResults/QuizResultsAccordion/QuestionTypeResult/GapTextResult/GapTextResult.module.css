@@ -1,0 +1,20 @@
+.correctAnswer {
+    background-color: var(--hope-colors-success5);
+    border-radius: var(--hope-radii-md);
+    padding-left: .5em;
+    padding-right: .5em;
+    margin-left: .3em;
+    margin-right: .3em;
+    width: min-content;
+}
+
+.wrongAnswer {
+    display: flex;
+    border-radius: var(--hope-radii-md);
+    background-color: var(--hope-colors-danger5);
+    padding-left: .5em;
+    padding-right: .5em;
+    margin-left: .3em;
+    margin-right: .3em;
+    width: fit-content;
+}

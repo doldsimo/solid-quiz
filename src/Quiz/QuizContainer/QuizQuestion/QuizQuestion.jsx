@@ -5,6 +5,7 @@ import SingleChoice from "./SingleChoice/SingleChoice";
 import MultipleChoice from "./MultipleChoice/MultipleChoice";
 import CorrectOrder from "./CorrectOrder/CorrectOrder";
 import NumberInput from "./NumberInput/NumberInput";
+import GapText from "./GapText/GapText";
 
 let counter = 0;
 let oldQuestionType = "";
@@ -49,6 +50,9 @@ const QuizQuestion = () => {
         </Match>
         <Match when={currentQuestion().questionType === "numberinput"}>
           {helper() && <NumberInput />}
+        </Match>
+        <Match when={currentQuestion().questionType === "gaptext"}>
+          {helper() && <GapText />}
         </Match>
       </Switch>
     </div>
