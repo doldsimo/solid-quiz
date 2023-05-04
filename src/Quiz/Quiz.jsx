@@ -25,6 +25,8 @@ const config = {
 // allowBackJump    | Boolean which allows Backjumping to previous Questions or not
 // showProgressBar  | Boolean which can be enabled to show a quiz progress bar
 // showQuizPoints   | Boolean which can be enabled to show inside the quiz the max. Points for every question
+// resultType       | String which decide how the result is displayed there are these options: ("none" | "points" | "feedback")
+// onComplete       | Function which is executed after quiz is completed event e can be used with informations about result
 
 export const Quiz = (props) => {
   return (
