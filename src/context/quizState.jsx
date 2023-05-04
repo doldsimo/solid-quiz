@@ -12,6 +12,7 @@ export function QuizProvider(props) {
     const [showProgressBar, setShowProgressBar] = createSignal(false);    // if it is true show progressbar is visible, else progressbar is hidden
     const [showQuizPoints, setShowQuizPoints] = createSignal(false);    // if it is true show max points in every Quiz question
     const [resultType, setResultType] = createSignal("none");    // variable which decide how the result is displayed there are these options: ("none" | "points" | "feedback")
+    const [onComplete, setOnComplete] = createSignal(null);    // function which is executed after quiz is completed event can be used with informations about result
     // const [quizStyle, setQuizStyle] = createSignal("true");    // set quizstyle at the moment there are two styles: ("scroll" | "default") 
     const [allUserAnswers, setAllUserAnswers] = createSignal([]);
 
@@ -30,8 +31,22 @@ export function QuizProvider(props) {
         setCurrentPage(pIndex);
         setCurrentQuestion(quiz().questions[pIndex - 1]);
     }
-
-    return <QuizContext.Provider value={{ progress, setProgress, questionsSum, setQuestionsSum, allowBackjumping, setAllowBackjumping, currentPage, setCurrentPage, setInitialQuizInfo, setCurrentQuestion, currentQuestion, navigateToQuizPage, quiz, setQuiz, setAllUserAnswers, allUserAnswers, showProgressBar, setShowProgressBar, showQuizPoints, setShowQuizPoints, resultType, setResultType }}>
+   
+    return <QuizContext.Provider
+        value={{
+            progress, setProgress,
+            questionsSum, setQuestionsSum,
+            allowBackjumping, setAllowBackjumping,
+            currentPage, setCurrentPage,
+            setInitialQuizInfo, setCurrentQuestion,
+            currentQuestion, navigateToQuizPage,
+            quiz, setQuiz,
+            setAllUserAnswers, allUserAnswers,
+            showProgressBar, setShowProgressBar,
+            showQuizPoints, setShowQuizPoints,
+            resultType, setResultType,
+            onComplete, setOnComplete
+        }}>
         {props.children}
     </QuizContext.Provider >
 }

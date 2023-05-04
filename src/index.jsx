@@ -30,14 +30,20 @@ const App = () => {
     },
   }
 
+  const testFunction = (e) =>{
+    console.log("Test Result is fired");
+    console.log(e);
+  }
+
   return (
     <Quiz
-      quiz={quiz_gap}
+      // quiz={quiz_gap}
       config={config}
       allowBackJump={true}
       showProgressBar={true}
       showQuizPoints={true}
       resultType="feedback"
+      // onComplete={(e) => testFunction(e)}
     />
   );
 };

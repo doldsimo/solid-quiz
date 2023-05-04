@@ -25,7 +25,6 @@ const GapText = () => {
 
     onMount(() => {
         if (allUserAnswers()[realPage - 1] !== null) {
-            console.log("old answers: ", [...allUserAnswers()[realPage - 1]]);
             setGapAnswer([...allUserAnswers()[realPage - 1]]);
         }
     });

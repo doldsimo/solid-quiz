@@ -7,8 +7,6 @@ import { Box, Select, SelectContent, SelectIcon, SelectListbox, SelectOption, Se
 const GapTextResult = (props) => {
     const { allUserAnswers } = useQuizData();
 
-    console.log("props: ", props);
-
     const text = props.question.question;
     const regex = /\*\*\*/
     const parts = text.split(regex);
@@ -24,7 +22,6 @@ const GapTextResult = (props) => {
                         {i < parts.length - 1 &&
                             <>
                                 <Box class={props.question.correctAnswer[i] === allUserAnswers()[props.qIndex][i] ? styles.correctAnswer : styles.wrongAnswer}>
-                                    {console.log(props.question.correctAnswer[i])}
                                     <Text>{props.question.correctAnswer[i]}</Text>
                                     {props.question.correctAnswer[i] !== allUserAnswers()[props.qIndex][i] && <Text> &nbsp; | Your answer: {allUserAnswers()[props.qIndex][i]}</Text>}
                                 </Box>

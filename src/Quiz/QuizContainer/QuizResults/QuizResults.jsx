@@ -8,7 +8,7 @@ import QuizResultsAccordion from "./QuizResultsAccordion/QuizResultsAccordion";
 
 
 const QuizResults = () => {
-    const { setCurrentPage, quiz, allUserAnswers, setInitialQuizInfo, resultType } = useQuizData();
+    const { setCurrentPage, quiz, allUserAnswers, setInitialQuizInfo, resultType, onComplete } = useQuizData();
     const [points, setPoints] = createSignal(0);
     const [showResultInfo, setShowResultInfo] = createSignal(false);
 
@@ -26,6 +26,19 @@ const QuizResults = () => {
 
     const toggleResults = () => {
         setShowResultInfo(!showResultInfo());
+    }
+
+    const onQuizEnd = () => {
+        let completeEventObject = {
+            alluserAnswers: allUserAnswers(),
+            points: points()
+        }
+        // onComplete is for hook which is executed when quiz ends, so that users of the lib can do something after quiz is over
+        if (onComplete().function !== null) {
+            onComplete().function(completeEventObject);
+        }
+
+        cleanQuiz();
     }
 
 
@@ -79,7 +92,7 @@ const QuizResults = () => {
                     <br />
                     {showResultInfo() && <QuizResultsAccordion />}
                     <Center>
-                        <Button class={styles.backButton} onClick={() => cleanQuiz()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
+                        <Button class={styles.backButton} onClick={() => onQuizEnd()} variant="outline" leftIcon={<IoArrowBackCircleSharp />}>End Quiz</Button>
                     </Center>
 
                 </Match>

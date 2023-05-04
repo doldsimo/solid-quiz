@@ -6,7 +6,7 @@ import QuizContent from "./QuizContent/QuizContent";
 import QuizResults from "./QuizResults/QuizResults";
 
 const QuizContainer = (props) => {
-    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar, setShowQuizPoints, setResultType } = useQuizData();
+    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar, setShowQuizPoints, setResultType, setOnComplete } = useQuizData();
 
     // Setting props for component which are passed from library user
     setInitialQuizInfo(props.quiz);
@@ -14,6 +14,8 @@ const QuizContainer = (props) => {
     setShowProgressBar(props.showProgressBar);
     setShowQuizPoints(props.showQuizPoints);
     setResultType(props.resultType);
+    setOnComplete({ function: props.onComplete }); //because prop is a function it must be wrapped inside an object
+
 
     return (
         <Switch>
