@@ -1,4 +1,4 @@
-import {Heading, Select, SelectContent, SelectIcon, SelectListbox, SelectOption, SelectOptionIndicator, SelectOptionText, SelectPlaceholder, SelectTrigger, SelectValue, Tag, Text } from "@hope-ui/solid"
+import { Heading, Select, SelectContent, SelectIcon, SelectListbox, SelectOption, SelectOptionIndicator, SelectOptionText, SelectPlaceholder, SelectTrigger, SelectValue, Tag, Text } from "@hope-ui/solid"
 import { useQuizData } from "../../../../context/quizState";
 import { Index, createSignal, onCleanup, onMount } from "solid-js";
 import styles from "./GapText.module.css";
