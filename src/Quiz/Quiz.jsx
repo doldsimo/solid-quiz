@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import lightColors from '../theme/lightColors';
 import darkColors from '../theme/darkColors';
-import { HopeProvider, useColorMode } from "@hope-ui/solid";
+import { HopeProvider } from "@hope-ui/solid";
 
 // Config for HopeUi
 const config = {

@@ -1,4 +1,4 @@
-import { Badge, Box, Heading, Radio, Tag, Text } from "@hope-ui/solid"
+import { Box, Heading, Radio, Tag, Text } from "@hope-ui/solid"
 import { useQuizData } from "../../../../context/quizState";
 import { createSignal, onCleanup, onMount } from "solid-js";
 

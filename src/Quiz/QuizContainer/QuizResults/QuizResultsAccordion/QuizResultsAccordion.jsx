@@ -1,5 +1,5 @@
-import { Switch, Match, createMemo } from "solid-js";
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Center, Icon, Text } from "@hope-ui/solid";
+import { Switch, Match } from "solid-js";
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Center, Text } from "@hope-ui/solid";
 import { useQuizData } from "../../../../context/quizState";
 import styles from "./QuizResultsAccordion.module.css";
 import { AiFillCheckCircle, AiFillCloseCircle } from 'solid-icons/ai'

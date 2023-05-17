@@ -1,8 +1,8 @@
-import { For, Index } from "solid-js";
+import { Index } from "solid-js";
 import { useQuizData } from "../../../../../../context/quizState";
 
 import styles from "./GapTextResult.module.css";
-import { Box, Select, SelectContent, SelectIcon, SelectListbox, SelectOption, SelectOptionIndicator, SelectOptionText, SelectPlaceholder, SelectTrigger, SelectValue, Text } from "@hope-ui/solid";
+import { Box, Text } from "@hope-ui/solid";
 
 const GapTextResult = (props) => {
     const { allUserAnswers } = useQuizData();

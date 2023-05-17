@@ -40,12 +40,6 @@ const NumberInput = () => {
                 </InputGroup>
 
             </Box>
-            {/* <Index each={currentQuestion().answers}>
-                    {(answer, i) => (
-                        <Box class={i === checkedAnswer() ? `${styles.answerBox} ${styles.answerBoxActive}` : styles.answerBox} w="100%" p="$4" borderRadius="$md" >
-                            <Radio class={styles.radioButton} checked={i === checkedAnswer()} variant="outline"><Text>{answer}</Text></Radio>
-                        </Box>)}
-                </Index> */}
         </div>
     )
 }
