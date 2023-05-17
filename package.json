@@ -1,6 +1,6 @@
 {
   "name": "solid-quiz",
-  "version": "0.0.6",
+  "version": "0.0.91",
   "description": "Simple quiz component for solidjs",
   "main": "./dist/solid-quiz.umd.js",
   "module": "./dist/solid-quiz.es.js",
@@ -22,15 +22,17 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@hope-ui/solid": "^0.6.7",
     "@thisbeyond/solid-dnd": "^0.7.4",
     "prop-types": "^15.8.1",
     "solid-icons": "^1.0.4",
     "solid-js": "^1.7.5",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
-    "vite-plugin-css-modules": "^0.0.1",
     "vite-plugin-dts": "^1.6.6",
     "vite-plugin-solid": "^2.3.0"
+  },
+  "dependencies": {
+    "@hope-ui/solid": "^0.6.7",
+    "vite-plugin-css-modules": "^0.0.1"
   }
 }
