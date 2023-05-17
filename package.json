@@ -17,7 +17,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "host": "vite --host"
   },
   "license": "MIT",
   "devDependencies": {
