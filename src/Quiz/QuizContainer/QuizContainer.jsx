@@ -6,10 +6,11 @@ import QuizContent from "./QuizContent/QuizContent";
 import QuizResults from "./QuizResults/QuizResults";
 
 const QuizContainer = (props) => {
-    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar, setShowQuizPoints, setResultType, setOnComplete } = useQuizData();
+    const { currentPage, questionsSum, setInitialQuizInfo, setAllowBackjumping, setShowProgressBar, setShowQuizPoints, setResultType, setOnComplete, setQuizTitle } = useQuizData();
 
     // Setting props for component which are passed from library user
     setInitialQuizInfo(props.quiz);
+    setQuizTitle(props.quizTitle);
     setAllowBackjumping(props.allowBackJump);
     setShowProgressBar(props.showProgressBar);
     setShowQuizPoints(props.showQuizPoints);
@@ -21,7 +22,6 @@ const QuizContainer = (props) => {
         <Switch>
             {/* Before Quiz is starting */}
             <Match when={currentPage() === 0}>
-                <p>Test</p>
                 <QuizStartScreen />
             </Match>
             {/* When Error of quiz process is happening (higher than 100, or lower than 0) */}

@@ -34,6 +34,7 @@ const Quiz = (props) => {
       <QuizProvider>
         <QuizContainer
           quiz={props.quiz !== undefined ? props.quiz : quiz}
+          quizTitle={props.quizTitle === undefined ? null : props.quizTitle}
           allowBackJump={props.allowBackJump === undefined ? false : props.allowBackJump}
           showProgressBar={props.showProgressBar === undefined ? true : props.showProgressBar}
           showQuizPoints={props.showQuizPoints === undefined ? false : props.showQuizPoints}
