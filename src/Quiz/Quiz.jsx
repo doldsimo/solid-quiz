@@ -49,6 +49,7 @@ const Quiz = (props) => {
 // define PropTyes for autocomplete for Quiz component
 Quiz.propTypes = {
   quiz: PropTypes.object.isRequired,
+  quizTitle: PropTypes.string,
   config: PropTypes.object,
   allowBackJump: PropTypes.bool,
   showProgressBar: PropTypes.bool,

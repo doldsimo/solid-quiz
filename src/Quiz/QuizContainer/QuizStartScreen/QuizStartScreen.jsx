@@ -13,7 +13,6 @@ const QuizStartScreen = () => {
             <Center>
                 <div>
                     <Center>
-                        {console.log(quizTitle())}
                         <Heading size="lg" level="1">{quizTitle()}</Heading>
                     </Center>
                     <Button class={styles.button} rightIcon={<AiFillPlayCircle />} variant="outline" onClick={() => navigateToQuizPage(1)}>
