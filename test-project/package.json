@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "solid-js": "^1.5.1",
-    "solid-quiz": "file:../dist/solid-quiz.umd.js"
+    "solid-quiz": "0.0.91"
   }
 }

@@ -1,6 +1,4 @@
 {
-  "quizTitle": "SolidJS Quiz",
-  "allowBackJump": false,
   "questions": [
     {
       "question": "SolidJS is a lightweight *** library for building web user interfaces. It emphasizes efficient rendering and strong typing to create fast, scalable ***. One of its key features is its use of a reactive programming model, which means that components automatically *** when their underlying data changes. SolidJS also includes a powerful *** syntax for creating templates and components, making it easy to build complex UIs. Additionally, it offers first-class support for TypeScript and integrates well with other popular libraries and frameworks. With its focus on *** and ease of use, SolidJS is a promising option for developers looking to build high-quality web applications.",

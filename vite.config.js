@@ -1,9 +1,12 @@
 import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
 import dts from "vite-plugin-dts";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+
 
 export default defineConfig({
   plugins: [
+    cssInjectedByJsPlugin(),
     solidPlugin(),
     dts({
       insertTypesEntry: true,
@@ -21,8 +24,12 @@ export default defineConfig({
       fileName: (format) => `solid-quiz.${format}.js`,
       formats: ["es", "umd"],
     },
+    cssCodeSplit: false,
     rollupOptions: {
       external: ["solid-js"],
+      output: {
+        manualChunks: undefined,
+      },
     },
   },
 });
