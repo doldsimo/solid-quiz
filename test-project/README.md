@@ -1,3 +1,22 @@
+## Local Linking from above solid-quiz library to this testproject.
+
+This steps must be executed after every pc restart.
+
+
+navigate in the folder ./ execute: 
+
+````
+npm link
+````
+
+navigate in the test-quizes project and execute:
+
+````
+npm link library
+````
+
+source: https://javascript.plainenglish.io/test-your-library-locally-with-npm-link-a5aa79d07270
+
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
