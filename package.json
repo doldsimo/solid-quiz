@@ -35,5 +35,9 @@
   "dependencies": {
     "@hope-ui/solid": "^0.6.7",
     "vite-plugin-css-modules": "^0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doldsimo/solid-quiz.git"
   }
 }
