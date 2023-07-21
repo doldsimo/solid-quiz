@@ -33,7 +33,7 @@ const App = () => {
   return (
     <Quiz
       quiz={quiz_gap}
-      quizTitle="SolidJS Quiz"
+      // quizStartButton="SolidJS Quiz"
       config={config}
       allowBackJump={true}
       showProgressBar={true}

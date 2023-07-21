@@ -34,7 +34,7 @@ const Quiz = (props) => {
       <QuizProvider>
         <QuizContainer
           quiz={props.quiz !== undefined ? props.quiz : quiz}
-          quizTitle={props.quizTitle === undefined ? null : props.quizTitle}
+          quizStartButton={props.quizStartButton === undefined ? null : props.quizStartButton}
           allowBackJump={props.allowBackJump === undefined ? false : props.allowBackJump}
           showProgressBar={props.showProgressBar === undefined ? true : props.showProgressBar}
           showQuizPoints={props.showQuizPoints === undefined ? false : props.showQuizPoints}
@@ -49,7 +49,7 @@ const Quiz = (props) => {
 // define PropTyes for autocomplete for Quiz component
 Quiz.propTypes = {
   quiz: PropTypes.object.isRequired,
-  quizTitle: PropTypes.string,
+  quizStartButton: PropTypes.string,
   config: PropTypes.object,
   allowBackJump: PropTypes.bool,
   showProgressBar: PropTypes.bool,

@@ -44,7 +44,7 @@ import { quiz } from './quiz.json';
 | **Prop Name**   | **Type** | **Required** | **Description**                                                                                       |
 |-----------------|----------|--------------|-------------------------------------------------------------------------------------------------------|
 | quiz            | object   | Yes          | JSON Object for quiz data                                                                             |
-| quizTitle       | String   | No           | String for showing quiz title on start page                                                           |
+| quizStartButton | String   | No           | String for showing text on start button on start page, default text is "Start Quiz"                                                           |
 | config          | object   | No           | JSON Object for config (color, theme darkmode/lightmode)                                              |
 | allowBackJump   | Boolean  | No           | allow backjumping to previous questions                                                               |
 | showProgressBar | Boolean  | No           | can be enabled to show a quiz progress bar                                                            |

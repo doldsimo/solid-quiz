@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <h1>Inside Test-Project</h1>
-      <Quiz quiz={quiz} allowBackJump={false} quizTitle={"SolidJS Quiz"}/>
+      <Quiz quiz={quiz} allowBackJump={false} quizStartButton={"SolidJS Quiz"}/>
     </>
   );
 };

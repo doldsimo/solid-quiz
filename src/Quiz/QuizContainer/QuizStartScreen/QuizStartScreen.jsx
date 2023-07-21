@@ -5,14 +5,14 @@ import styles from "./QuizStartScreen.module.css";
 
 
 const QuizStartScreen = () => {
-    const { navigateToQuizPage, quizTitle } = useQuizData();
+    const { navigateToQuizPage, quizStartButton } = useQuizData();
 
 
     return (
         <div>
             <Center>
                 <Button class={styles.button} rightIcon={<AiFillPlayCircle />} variant="outline" onClick={() => navigateToQuizPage(1)}>
-                    {quizTitle() === null ? "Start Quiz" : quizTitle()}
+                    {quizStartButton() === null ? "Start Quiz" : quizStartButton()}
                 </Button>
             </Center>
         </div>
