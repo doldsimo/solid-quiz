@@ -39,7 +39,7 @@ const App = () => {
       showProgressBar={true}
       showQuizPoints={true}
       resultType="feedback"
-     //onComplete={(e) => console.log(e)}
+    //onComplete={(e) => console.log(e)}
     />
   );
 };

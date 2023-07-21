@@ -7,18 +7,13 @@ import styles from "./QuizStartScreen.module.css";
 const QuizStartScreen = () => {
     const { navigateToQuizPage, quizTitle } = useQuizData();
 
-    
+
     return (
         <div>
             <Center>
-                <div>
-                    <Center>
-                        <Heading size="lg" level="1">{quizTitle()}</Heading>
-                    </Center>
-                    <Button class={styles.button} rightIcon={<AiFillPlayCircle />} variant="outline" onClick={() => navigateToQuizPage(1)}>
-                        Start Quiz
-                    </Button>
-                </div>
+                <Button class={styles.button} rightIcon={<AiFillPlayCircle />} variant="outline" onClick={() => navigateToQuizPage(1)}>
+                    {quizTitle() === null ? "Start Quiz" : quizTitle()}
+                </Button>
             </Center>
         </div>
     )
