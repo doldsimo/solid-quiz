@@ -1,14 +1,21 @@
-# Solid Quiz
+<p align="center">
+  <a href="https://www.npmjs.com/package/solid-quiz">
+    <img
+      alt="Solid quiz - Simple quiz component for solidjs and solid-start."
+      src="https://raw.githubusercontent.com/doldsimo/solid-quiz/master/docs/imges/solid-quiz-title-preview.png">
+  </a>
+</p>
 
-Simple quiz component for solid-js.  <br>
-Allows you to add a simple quiz in solidjs. You can create the content and use it in the quiz. There are different quiz pens
+<br>
 
-## Example live demo
+Allows you to add a simple quiz in solidjs. You can [create the content](#how-do-i-create-my-own-quizzes) by yourselve and use it in the quiz.
 
-Check out the [live demo](https://doldsimo.github.io/solidjs-quiz/quiz).
+## Live demo
+
+Try it out in the [live demo](https://doldsimo.github.io/solidjs-quiz/quiz).
 
 ## Installation
-``` 
+```sh
 npm i solid-quiz
 ```
 
@@ -61,9 +68,5 @@ You can use the [simple quiz editor](https://doldsimo.github.io/solidjs-quiz/edi
 ## Need Help?
 
 If you have a problem with the library, [create a new issue](https://github.com/doldsimo/solid-quiz/issues/new).
-
-## Who made this? ✍
-
-[Simon Dold](https://github.com/doldsimo)
 
 ## Github 
