@@ -8,7 +8,11 @@
 
 <br>
 
-Allows you to add a simple quiz in solidjs. You can [create the content](#how-do-i-create-my-own-quizzes) by yourselve and use it in the quiz.
+- Build for [solidjs](https://www.solidjs.com/) and [solid-start](https://start.solidjs.com/getting-started/what-is-solidstart).
+- Example apps which uses solid quiz:
+  -  [solidjs](https://github.com/doldsimo/solidjs-quiz)
+  -  [solid-start](https://github.com/doldsimo/solid-start-quiz-app)
+- Allows you to add a simple quiz in solidjs. You can [create the content](#how-do-i-create-my-own-quizzes) by yourselve and use it in the quiz.
 
 ## Live demo
 
@@ -17,6 +21,9 @@ Try it out in the [live demo](https://doldsimo.github.io/solidjs-quiz/quiz).
 ## Installation
 ```sh
 npm i solid-quiz
+```
+```sh
+pnpm install solid-quiz
 ```
 
 ## Importing
