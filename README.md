@@ -7,8 +7,6 @@ Allows you to add a simple quiz in solidjs. You can create the content and use i
 
 Check out the [live demo](https://doldsimo.github.io/solidjs-quiz/quiz).
 
-<br />
-
 ## Installation
 ``` 
 npm i solid-quiz
