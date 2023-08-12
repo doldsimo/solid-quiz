@@ -43,7 +43,8 @@ import { quiz } from './quiz.json'; //your own quiz data in json format
 
 You can use the [simple quiz editor](https://doldsimo.github.io/solidjs-quiz/editor) or write the json quiz by hand in the correct format.
 
-The json structure is the following:
+The correct json format is given in the following:
+> In this quiz is for every question type (multiplechoice, singlechoice, correctorder, numberinput, gaptext) an example given.
 
 ```jsx
 const quiz = {
@@ -148,7 +149,7 @@ const quiz = {
 - dark/light mode
 - quiz progress bar
 - random question order
-- Different question types (multiple choice, true/false, number input, fill in the blank, matching question)
+- Different question types (multiplechoice, singlechoice, correctorder, numberinput, gaptext)
 - Event after quiz finished
 - Points evaluation (extensive, only points, no evaluation
 - allow back jump to questions
