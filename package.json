@@ -1,6 +1,6 @@
 {
   "name": "solid-quiz",
-  "version": "0.0.95",
+  "version": "0.0.96",
   "description": "Simple quiz component for solidjs",
   "main": "./dist/solid-quiz.umd.js",
   "module": "./dist/solid-quiz.es.js",
