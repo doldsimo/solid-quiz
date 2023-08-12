@@ -119,7 +119,7 @@ import { quiz } from './quiz.json';
 <Quiz quiz={quiz} showQuizPoints/>
 ```
 
-### Show the results after the quiz points
+### Show the results after the quiz is finished
 
 > There are three different result tyles: "none" \| "points" \| "feedback"
 ```jsx
