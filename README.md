@@ -43,6 +43,101 @@ import { quiz } from './quiz.json'; //your own quiz data in json format
 
 You can use the [simple quiz editor](https://doldsimo.github.io/solidjs-quiz/editor) or write the json quiz by hand in the correct format.
 
+The json structure is the following:
+
+```jsx
+const quiz = {
+  "questions": [
+    {
+      "question": "SolidJS is a lightweight *** library for building web user interfaces. It emphasizes efficient rendering and strong typing to create fast, scalable ***. One of its key features is its use of a reactive programming model, which means that components automatically *** when their underlying data changes. SolidJS also includes a powerful *** syntax for creating templates and components, making it easy to build complex UIs. Additionally, it offers first-class support for TypeScript and integrates well with other popular libraries and frameworks. With its focus on *** and ease of use, SolidJS is a promising option for developers looking to build high-quality web applications.",
+      "questionType": "gaptext",
+      "correctAnswer": [
+        "JavaScript",
+        "applications",
+        "re-render",
+        "JSX-like",
+        "performance"
+      ],
+      "point": "10"
+    },
+    {
+      "question": "Who invented solidjs?",
+      "questionType": "singlechoice",
+      "answers": [
+        "Ryan Carniato",
+        "Linus Torvalds"
+      ],
+      "correctAnswer": "0",
+      "point": "10"
+    },
+    {
+      "question": "How many GitHub stars does the Solidjs repository have? (04/25/2023)",
+      "questionType": "numberinput",
+      "correctAnswer": "27000",
+      "point": "10"
+    },
+    {
+      "question": "Who invented solidjs?",
+      "questionType": "singlechoice",
+      "answers": [
+        "Ryan Carniato",
+        "Linus Torvalds"
+      ],
+      "correctAnswer": "0",
+      "point": "10"
+    },
+    {
+      "question": "Arrange the different frontend frameworks in descending order of their Github Stars.",
+      "questionType": "correctorder",
+      "answers": [
+        "Solid",
+        "Angular",
+        "Vue",
+        "React",
+        "Svelte"
+      ],
+      "correctAnswer": [
+        "React",
+        "Vue",
+        "Angular",
+        "Svelte",
+        "Solid"
+      ],
+      "point": "10"
+    },
+    {
+      "question": "What are new JSX components that solidjs has out of the box compared to React?",
+      "questionType": "multiplechoice",
+      "answers": [
+        "For",
+        "Index",
+        "All",
+        "Switch",
+        "Match"
+      ],
+      "correctAnswer": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "point": "10"
+    },
+    {
+      "question": "When was the first commit in the Solidjs repostory?",
+      "questionType": "singlechoice",
+      "answers": [
+        "2020",
+        "2016"
+      ],
+      "correctAnswer": "1",
+      "point": "10"
+    }
+  ]
+}
+```
+
 ## Result
 
 
