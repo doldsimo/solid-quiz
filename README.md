@@ -63,14 +63,86 @@ You can use the [simple quiz editor](https://doldsimo.github.io/solidjs-quiz/edi
 
 | **Prop Name**   | **Type** | **Required** | **Description**                                                                                       |
 |-----------------|----------|--------------|-------------------------------------------------------------------------------------------------------|
-| quiz            | object   | Yes          | JSON Object for quiz data                                                                             |
-| quizStartButton | String   | No           | String for showing text on start button on start page, default text is "Start Quiz"                                                           |
-| config          | object   | No           | JSON Object for config (color, theme darkmode/lightmode)                                              |
-| allowBackJump   | Boolean  | No           | allow backjumping to previous questions                                                               |
-| showProgressBar | Boolean  | No           | can be enabled to show a quiz progress bar                                                            |
-| showQuizPoints  | Boolean  | No           | can be enabled to show inside the quiz the max. points for every question                             |
-| resultType      | String   | No           | decide how the result is displayed there are these options: ("none" \| "points" \| "feedback")        |
-| onComplete      | func     | No           | Function which is executed after quiz is completed event e can be used with informations about result |
+| quiz            | `Object` | Yes          | JSON Object for quiz data                                                                             |
+| quizStartButton | `String` | No           | String for showing text on start button on start page, default text is "Start Quiz"                                                           |
+| config          | `Object`  |No           | JSON Object for config (color, theme darkmode/lightmode)                                              |
+| allowBackJump   | `Boolean` | No           | allow backjumping to previous questions                                                               |
+| showProgressBar | `Boolean` | No           | can be enabled to show a quiz progress bar                                                            |
+| showQuizPoints  | `Boolean` | No           | can be enabled to show inside the quiz the max. points for every question                             |
+| resultType      | `String`  | No           | decide how the result is displayed there are these options: ("none" \| "points" \| "feedback")        |
+| onComplete      | `func`    | No           | Function which is executed after quiz is completed event e can be used with informations about result |
+
+## Functionality examples
+> Examples how the probs above can be used inside the quiz. Of course all probs can be combined
+
+### Start button with your own text
+```jsx
+import Quiz from "solid-quiz";
+import { quiz } from './quiz.json';
+ ...
+<Quiz quiz={quiz} quizStartButton="Start solidjs quiz"/>
+```
+
+### With own visual config (for quiz in dark or lightmode) 
+```jsx
+import Quiz from "solid-quiz";
+import { quiz } from './quiz.json';
+const config = {
+  initialColorMode: "light", // "dark" | "light" | "system"
+  ...
+}
+ ...
+<Quiz quiz={quiz} config={config}/>
+```
+
+### Allow backjumping to previus questions
+```jsx
+import Quiz from "solid-quiz";
+import { quiz } from './quiz.json';
+ ...
+<Quiz quiz={quiz} allowBackJump/>
+```
+
+### Show progress bar
+```jsx
+import Quiz from "solid-quiz";
+import { quiz } from './quiz.json';
+ ...
+<Quiz quiz={quiz} showProgressBar/>
+```
+
+### Show quiz points for every question inside the quiz
+```jsx
+import Quiz from "solid-quiz";
+import { quiz } from './quiz.json';
+ ...
+<Quiz quiz={quiz} showQuizPoints/>
+```
+
+### Show the results after the quiz points
+
+> There are three different result tyles: "none" \| "points" \| "feedback"
+```jsx
+import Quiz from "solid-quiz";
+import { quiz } from './quiz.json';
+ ...
+<Quiz quiz={quiz} resultType="points"/>
+```
+
+### Callback function which is triggered after the quiz is finised
+
+> This function can be used trigger everything you want to do after the quiz is finised.
+```jsx
+import Quiz from "solid-quiz";
+import { quiz } from './quiz.json';
+
+const resultFunction = (e) => {
+  console.log(e); //Event with quiz results
+  // Do what ever you want
+}
+ ...
+<Quiz quiz={quiz} onComplete={resultFunction}/>
+```
 
 ## Need Help?
 
