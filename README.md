@@ -6,7 +6,7 @@
   </a>
 </p>
 
-<br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 - Quiz library build for [solidjs](https://www.solidjs.com/) and [solid-start](https://start.solidjs.com/getting-started/what-is-solidstart).
 - Example apps which uses solid quiz:
@@ -245,5 +245,9 @@ const resultFunction = (e) => {
 ## Need Help?
 
 If you have a problem with the library, [create a new issue](https://github.com/doldsimo/solid-quiz/issues/new).
+
+## License
+
+This project is released under the [MIT license](https://github.com/doldsimo/solid-quiz/blob/master/LICENSE).
 
 ## Github 
