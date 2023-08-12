@@ -8,7 +8,7 @@
 
 <br>
 
-- Build for [solidjs](https://www.solidjs.com/) and [solid-start](https://start.solidjs.com/getting-started/what-is-solidstart).
+- Quiz library build for [solidjs](https://www.solidjs.com/) and [solid-start](https://start.solidjs.com/getting-started/what-is-solidstart).
 - Example apps which uses solid quiz:
   -  [solidjs](https://github.com/doldsimo/solidjs-quiz)
   -  [solid-start](https://github.com/doldsimo/solid-start-quiz-app)
