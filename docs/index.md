@@ -6,13 +6,17 @@
   </a>
 </p>
 
-<div align="center">
-
-[![solid-quiz](https://img.shields.io/badge/GitHub-solid--quiz-black?logo=github)](https://github.com/doldsimo/solid-quiz)
-[![npm](https://img.shields.io/npm/v/solid-quiz.svg?logo=npm)](https://www.npmjs.com/package/solid-quiz)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-</div>
+<p align="center">
+  <a href="https://github.com/doldsimo/solid-quiz">
+    <img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" alt="GitHub Repo">
+  </a>
+  <a href="https://www.npmjs.com/package/solid-quiz">
+    <img src="https://img.shields.io/npm/v/solid-quiz.svg?logo=npm" alt="npm">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
+  </a>
+</p>
 
 - Quiz library build for [solidjs](https://www.solidjs.com/) and [solid-start](https://start.solidjs.com/getting-started/what-is-solidstart).
 - Example apps which uses solid quiz:
