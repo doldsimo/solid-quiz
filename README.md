@@ -6,7 +6,13 @@
   </a>
 </p>
 
+<div align="center">
+
+[![solid-quiz](https://img.shields.io/badge/GitHub-solid--quiz-black?logo=github)](https://github.com/doldsimo/solid-quiz)
+[![npm](https://img.shields.io/npm/v/solid-quiz.svg?logo=npm)](https://www.npmjs.com/package/solid-quiz)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+</div>
 
 - Quiz library build for [solidjs](https://www.solidjs.com/) and [solid-start](https://start.solidjs.com/getting-started/what-is-solidstart).
 - Example apps which uses solid quiz:
@@ -24,6 +30,7 @@
 ```sh
 npm i solid-quiz
 ```
+or:
 ```sh
 pnpm install solid-quiz
 ```
@@ -141,13 +148,11 @@ const quiz = {
 }
 ```
 
-## Result
-
-
 ## Functions
 
 - JSON based input
 - styled Quiz
+- optimized for mobile and large screens
 - dark/light mode
 - quiz progress bar
 - random question order
@@ -250,4 +255,7 @@ If you have a problem with the library, [create a new issue](https://github.com/
 
 This project is released under the [MIT license](https://github.com/doldsimo/solid-quiz/blob/master/LICENSE).
 
-## Github 
+## Github and NPM
+- [![GitHub Repo](https://img.shields.io/badge/GitHub-solid--quiz-black?logo=github)](https://github.com/doldsimo/solid-quiz)
+- [![npm](https://img.shields.io/npm/v/solid-quiz.svg?logo=npm)](https://www.npmjs.com/package/solid-quiz)
+
