@@ -1,6 +1,7 @@
 {
   "name": "solid-quiz",
-  "version": "0.0.97",
+  "version": "0.0.98",
+  "author": "Simon Dold",
   "description": "Simple quiz component for solidjs",
   "main": "./dist/solid-quiz.umd.js",
   "module": "./dist/solid-quiz.es.js",
@@ -39,5 +40,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/doldsimo/solid-quiz.git"
-  }
+  },
+  "keywords": [
+    "solid",
+    "solid-start",
+    "quiz",
+    "quiz-component"
+  ]
 }
