@@ -162,7 +162,7 @@ const quiz = {
 - random question order
 - Different question types (multiplechoice, singlechoice, correctorder, numberinput, gaptext)
 - Event after quiz finished
-- Points evaluation (extensive, only points, no evaluation
+- Points evaluation (extensive, only points, no evaluation)
 - allow back jump to questions
 - show quiz points to user
 
