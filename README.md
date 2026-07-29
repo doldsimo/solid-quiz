@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" alt="GitHub Repo">
   </a>
   <a href="https://www.npmjs.com/package/solid-quiz">
-    <img src="https://img.shields.io/npm/v/solid-quiz.svg?logo=npm" alt="npm">
+    <img src="https://img.shields.io/npm/v/solid-quiz.svg?logo=nodedotjs" alt="npm">
   </a>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
